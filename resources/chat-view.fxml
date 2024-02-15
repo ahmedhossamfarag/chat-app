@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chat.ChatViewController">
+    <top>
+        <HBox prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: rgb(50,180,50);" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../src/main/resources/com/example/chat/images/user.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="name" prefHeight="40.0" prefWidth="560.0" text="Label" textFill="WHITE">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin>
+                </Label>
+            </children>
+        </HBox>
+    </top>
+    <bottom>
+        <BorderPane prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: rgb(50,180,50);" BorderPane.alignment="CENTER">
+            <right>
+                <ImageView fx:id="send" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#send" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets left="20.0" />
+                    </BorderPane.margin>
+                    <image>
+                        <Image url="@../src/main/resources/com/example/chat/images/send.png" />
+                    </image>
+                </ImageView>
+            </right>
+            <center>
+                <TextField fx:id="massage" BorderPane.alignment="CENTER" />
+            </center>
+            <padding>
+                <Insets left="20.0" right="20.0" />
+            </padding>
+        </BorderPane>
+    </bottom>
+    <center>
+        <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="NEVER" BorderPane.alignment="CENTER">
+            <content>
+                <VBox fx:id="content" prefHeight="318.0" prefWidth="598.0" spacing="5.0">
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </padding></VBox>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>
